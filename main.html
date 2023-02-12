@@ -1,0 +1,17 @@
+<div id="square" style="width: 500px; height: 500px; border: 1px solid black; position: relative;">
+    <div id="dot" style="width: 10px; height: 10px; background-color: red; position: absolute;"></div>
+  </div>
+  
+  <script type="text/javascript">
+    var square = document.getElementById("square");
+    var dot = document.getElementById("dot");
+  
+    setInterval(function() {
+      var x = Math.floor(Math.random() * (square.offsetWidth - dot.offsetWidth));
+      var y = Math.floor(Math.random() * (square.offsetHeight - dot.offsetHeight));
+      dot.style.left = x + "px";
+      dot.style.top = y + "px";
+    }, 500);
+  </script>
+  
+  
